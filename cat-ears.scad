@@ -1,24 +1,24 @@
 /*[ Headband ]*/
 
 // Radius of the circle that makes up the upper half of the headband
-upperRadius = 56; // [20:120]
+upperRadius = 61; // [20:120]
 // This angle determines the size of the upper half
 upperAngle = 80; // [40:140]
 // Radius of the circle that makes up the middle part of the headband
-middleRadius = 80; // [20:120]
+middleRadius = 87; // [20:120]
 // This angle determines the size of the middle part of the headband
 middleAngle = 30; // [0:90]
 // This angle determines the size of the bottom half
 bottomAngle = 30; // [0:120]
 // Radius of the partial circles of the bottom half
-bottomRadius = 100; // [20:600]
+bottomRadius = 109; // [20:600]
 // Radius of the end bits at the very bottom
 endRadius = 10; // [0:50]
 
 // Height of the headband
-height = 6; // [0:0.1:30]
+height = 5; // [0:0.1:30]
 // Width of the headband
-width = 2.5; // [0:0.1:30]
+width = 3.1; // [0:0.1:30]
 
 /*[ Ears ]*/
 
@@ -28,9 +28,9 @@ earPositionAngle = 40; // [0:90]
 // Radius of the curvature of the ears sides
 earRadius = 120; // [10:500]
 // Roughly how the ears are
-earLength = 45; // [10:500]
+earLength = 50; // [10:500]
 // The width of the ears
-earWidth = 50; // [10:120]
+earWidth = 55; // [10:120]
 // How wide the tip of the ear is
 earTipWidth = 5; // [2:40]
 // How big the angle of the ears base is
@@ -42,9 +42,9 @@ earConnectorRadius = 7; // [2:50]
 // Should be smaller than upperAngle otherwise spikes will be detached
 spikesAngle = 80; // [0:120]
 // How long the spikes are. Increase for more grip
-spikeDepth = 2.5; // [0:0.1:10]
+spikeDepth = 0.0; // [0:0.1:10]
 // How high the spikes are.
-spikeHeight = 4; // [0:0.1:10]
+spikeHeight = 2.7; // [0:0.1:10]
 // How high the spikes are at the tip.
 spikeHeightEnd = 1.5; // [0:0.1:10]
 // How wide the spikes are.
