@@ -1,15 +1,15 @@
 /*[ Headband ]*/
 
 // Radius of the circle that makes up the upper half of the headband
-upperRadius = 61; // [20:120]
+upperRadius = 66; // [20:120]
 // This angle determines the size of the upper half
-upperAngle = 80; // [40:140]
+upperAngle = 65; // [40:140]
 // Radius of the circle that makes up the middle part of the headband
 middleRadius = 87; // [20:120]
 // This angle determines the size of the middle part of the headband
 middleAngle = 30; // [0:90]
 // This angle determines the size of the bottom half
-bottomAngle = 30; // [0:120]
+bottomAngle = 35; // [0:120]
 // Radius of the partial circles of the bottom half
 bottomRadius = 109; // [20:600]
 // Radius of the end bits at the very bottom
@@ -23,7 +23,7 @@ width = 3.1; // [0:0.1:30]
 /*[ Ears ]*/
 
 // Where the ears are located on the headband
-earPositionAngle = 40; // [0:90]
+earPositionAngle = 41; // [0:90]
 
 // Radius of the curvature of the ears sides
 earRadius = 120; // [10:500]
