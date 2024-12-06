@@ -168,7 +168,7 @@ module angled_thing(r, angle, h = height, spikesAngle = 0, spikeOffset = 0, outs
             translate([ -r, 0, 0 ])
             rotate([ 0, 0, spikesDirection * spikeAngle])
             translate([ r - width / 2, 0, 0 ])
-            translate([recessSide == "inner" ? 0 : width,0,0]) 
+            translate([recessSide == "inner" ? 0 : width,0,0])
             rotate([0,0,recessSide == "inner" ? -90 : 90])
             spike();
         }
@@ -282,13 +282,13 @@ module ear(start_angle=0){
           angled_thing(r = tip_radius, angle = angle_tip, spikeOffset = r1 * sin(angle_side), insideRecess = insideEarRecess, outsideRecess = outsideEarRecess);
         }
       }
-      
+
       headbandRecessDepth = (headbandRecess ? recessDepth : 0);
       translate([-width/2 + headbandRecessDepth,0,0]){
       scale([cableHoleAspect,1,1]) {
       rotate([-90,0,0])
       cylinder(h = 1000, r=cableHole/2, $fn=16);
-      
+
       translate([-cableHole/2,0,0])
       cube([cableHole,1000,10] * (cableHoleOpen ? 1 : 0));
 
@@ -347,7 +347,7 @@ module horn(start_angle=0){
     cylinder(h= 100, r=hornyRadius);
 
     union() {
-    translate([earWidth/2,0,0]) 
+    translate([earWidth/2,0,0])
     rotate([0,0,earSideAngle])
     mirror([1,0,0])
     rotate([0,0,-start_angle]){
@@ -358,9 +358,9 @@ module horn(start_angle=0){
     angled_thing(r = r2-hornyDiff, angle =  180, insideRecess = outsideEarRecess, outsideRecess = insideEarRecess);
     }
     }
-    
+
     mirror([1,0,0])
-    translate([earWidth/2,0,0]) 
+    translate([earWidth/2,0,0])
     rotate([0,0,earSideAngle])
     mirror([1,0,0])
     rotate([0,0,-start_angle]){
@@ -396,7 +396,7 @@ module second_lower_half_with_rudelblinken() {
     rudelblinken_board_angle_length = 360 * (rudelblinken_board_length / bottom_circumference);
     translate([0, 0, 0.5])
     difference() {
-        hull() 
+        hull()
         {
             shift_angled(r = bottomRadius, angle = -rudelblinken_board_angle_length)
             round_end_thing();
@@ -408,9 +408,9 @@ module second_lower_half_with_rudelblinken() {
                 rudelblinken(h = width);
             }
         }
-                
+
         // Subtract the inner part of the hull that gets filled by the hull operation above
-        translate([-bottomRadius,0,0]) 
+        translate([-bottomRadius,0,0])
         cylinder($fs= 1,$fa=0.1,h = height*10, r = bottomRadius-(width/2), center = true);
 
         board_height_with_recess = rudelblinken_board_height + recessDepth;
@@ -421,20 +421,20 @@ module second_lower_half_with_rudelblinken() {
         translate([0,0, width / 2 - board_height_with_recess /2]){
         rudelblinken(h = board_height_with_recess + 0.01);
         // Dirty hack to have no overhang, when the pcb is slimmer than height
-        translate([height/2,0,0]) 
+        translate([height/2,0,0])
         rudelblinken(h = board_height_with_recess + 0.01);
         }
-        
+
         // USB c port cutout
         translate([width / 2 - recessDepth,-rudelblinken_board_length-20+0.1,-1.5]){
-            translate([0,0,1.5]) 
+            translate([0,0,1.5])
             cube([20,20,6]);
-            translate([1.5,0,0]) 
+            translate([1.5,0,0])
             cube([20,20,9]);
-            translate([1.5,0,1.5]) 
+            translate([1.5,0,1.5])
             rotate([-90,0,0])
             cylinder(h=20,d=3,$fn=20);
-            translate([1.5,0,7.5]) 
+            translate([1.5,0,7.5])
             rotate([-90,0,0])
             cylinder(h=20,d=3,$fn=20);
         }
@@ -512,7 +512,7 @@ rotate([0,0,90])
         earDistance = earPositionAngle*2 / (hearingAbility - 1);
         for(earPosition = [-earStartPosition:earDistance:0])
         shift_angled(r = upperRadius, angle = -earPosition)
-        translate([-relevant_length,0,0]) 
+        translate([-relevant_length,0,0])
         rotate([0,0,-90])
         if(horny){
             horn(start_angle = relevant_angle);
@@ -521,4 +521,3 @@ rotate([0,0,90])
         }
     }
 }
-
