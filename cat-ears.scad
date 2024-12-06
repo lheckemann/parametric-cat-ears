@@ -394,6 +394,7 @@ module second_lower_half_with_rudelblinken() {
      // Main beam until the rudelblinke board
     bottom_circumference = bottomRadius * 2 * PI;
     rudelblinken_board_angle_length = 360 * (rudelblinken_board_length / bottom_circumference);
+    translate([0, 0, 0.5])
     difference() {
         hull() 
         {
