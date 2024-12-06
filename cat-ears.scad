@@ -60,7 +60,7 @@ enableRudelblinken = false;
 /*[ LED recess ]*/
 
 // Where the recess for LED strips will be generated
-recess = "none"; //["none", "full", "outside", "inside", "insideWithoutHeadband"]
+recess = "insideWithoutHeadband"; //["none", "full", "outside", "inside", "insideWithoutHeadband"]
 headbandRecess = recess == "outside" || recess == "full" || recess == "inside";
 outsideEarRecess = recess == "outside" || recess == "full";
 insideEarRecess = recess == "inside" || recess == "full" || recess == "insideWithoutHeadband";
@@ -72,11 +72,11 @@ recessDepth = 1.0; // [0.0:0.01:5.0]
 recessWidth = 2.8; // [0:0.1:20]
 
 // Puch a hole into the base of the ears for for cables to the inside
-cableHole = 0.0; // [0:0.1:10]
+cableHole = 3.1; // [0:0.1:10]
 // If the cable hole should be open
-cableHoleOpen = false;
+cableHoleOpen = true;
 // Make the cable hole extra big
-cableHoleAspect = 1;
+cableHoleAspect = 1.3; // [0:0.1:2]
 
 // Dont open this section
 /*[ Other hacky options ]*/
